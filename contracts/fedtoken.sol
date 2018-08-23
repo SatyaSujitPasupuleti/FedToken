@@ -33,7 +33,8 @@ contract FEDToken is MintableToken {
 
     }
     //called when value of FEDToken needs to be increased
-    function addBond(double _numberOfBonds) public{
+    function addBond(uint amount, address _bondholder) public{
+        BOND bond = new BOND(FEDToken.address);
 
     }
 
@@ -41,12 +42,23 @@ contract FEDToken is MintableToken {
 contract BOND {
     address bondHolder;
     uint amount;
-    constructor(address _bondHolder, uint _amount,address fedToken) public{
+    address fedTokenAddress;
+    FEDToken Fed;
+    address owner;
+    constructor(address _bondHolder, uint _amount,address _fedToken) public{
+        bondHolder = _bondHolder;
+        amount = _amount;
+        fedTokenAddress = _fedToken;
+        owner = msg.sender;
 
     }
     function releaseAmount() private {
+        Fed = FedToken(fedTokenAddress);
+        Fed.transfer(amount,bondHolder);
         
+    
 
+        
     }
 
 }
