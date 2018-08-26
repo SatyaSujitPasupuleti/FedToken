@@ -22,6 +22,8 @@ contract FEDToken is MintableToken {
     
     //call this function first when value of FEDToken needs to be decreased
     function releaseBond(uint _numberOfBonds) public{
+        require(_numberOfBonds > 0);
+        require(bonds.length != 0);
         for(int i = 0 ; i<_numberOfBonds; i++) {
             bonds[i].releaseAmount();
         }
