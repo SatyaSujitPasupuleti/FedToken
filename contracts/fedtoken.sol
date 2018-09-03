@@ -7,7 +7,7 @@ contract FEDToken is MintableToken {
     uint8 public decimals = 2;
     uint public INITIAL_SUPPLY = 500000000;
     //status of how much money accounts want to put as bonds
-    uint public price=100;
+    uint public price=100000000;
     bool public needMint=false;
     BOND[] bonds;
     //get price and compare it to dollar value
