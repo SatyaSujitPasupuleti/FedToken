@@ -1,9 +1,8 @@
-var fedtoken = artifacts.require("./fedtoken");
-contract("fedtoken", async(accounts)=>{
-    let instance = await fedtoken.deployed();
+var FEDToken = artifacts.require("./FEDToken");
+contract("FEDToken", async(accounts)=>{
+    let instance = await FEDToken.deployed();
     var accounts = await web3.eth.accounts;
     it("should add bonds" , async() =>{
-       
         instance.addBond.call(10,accounts[1]);
         assert(instance.getBondLength(),1,"bond has been successfully added to list");
     })

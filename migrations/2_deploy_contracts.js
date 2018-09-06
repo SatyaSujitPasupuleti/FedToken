@@ -1,5 +1,5 @@
-var fedtoken = artifacts.require("./fedtoken");
+var FEDToken = artifacts.require("FEDToken");
 
 module.exports = function(deployer) {
-  deployer.deploy(fedtoken);
+  deployer.deploy(FEDToken);
 };
