@@ -10,10 +10,10 @@ contract("FEDToken", async(accounts)=>{
     it("should check if it can mint tokens to another specified address" , async() =>{
         var instance = await FEDToken.deployed();
         var accounts = await web3.eth.accounts;
-        instance.mintToDecrease.call(10,accounts[2]);
-        assert(instance.balances[accounts[2]],10,"fedtoken has been correctly minted");
+        instance.mintToDecrease.call(10,accounts[2],{from:accounts[1]});
+        assert(instance.balances[accounts[2]],10,"fedtoken has been correctly minted"); //not getting balance properly
     })
-    it("should release the bond amount" , async() =>{
+    it("should release the bond amount" , async() =>{ //failing because of require statement
         var instance = await FEDToken.deployed();
         var accounts = await web3.eth.accounts;
         instance.addBond.call(10,accounts[1]);
