@@ -1378,58 +1378,10 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x88a808841327dea775c368a3f4ae3081e4c910ce",
-      "transactionHash": "0xf651c45f37c5fc1ec7b377e2f05be75aa56100b56a64d4bcc17188fac26b36dc"
-    },
-    "1535756807926": {
-      "events": {},
-      "links": {},
-      "address": "0x527503eeb856524d2c43d68d27575418527272cb",
-      "transactionHash": "0x3ddeb7bb21be0f9bf8526a0534e2a36ac6570c0e28d789590fdfdf02f2348a51"
-    },
-    "1535843443623": {
-      "events": {},
-      "links": {},
-      "address": "0xf8ef11bc1a38a3ce3956e1a621bd78c78e010ad1",
-      "transactionHash": "0x5ef75b9fb39dc121ee639b4d45e009939e96f342e3ce076ba7f5645e2806ddc3"
-    },
-<<<<<<< HEAD
-    "1536106476778": {
-      "events": {},
-      "links": {},
-      "address": "0x0aca8c7d22cb4075ff3cfbbb0023a1b707d7195d",
-      "transactionHash": "0x456674c1868511f0bcccd5a1b937c105d07df56a99caa9ba14c9a7aab842cc70"
-    },
-    "1536155052560": {
-      "events": {},
-      "links": {},
-      "address": "0x303a686a4e316cf545d0b6e4bcb9fd0902799bd4",
-      "transactionHash": "0xa60e00a0ec08eea244913129ae8eb7778ce8f158cbe48ab6181fd11a74824b13"
-    },
-    "1536155250331": {
-      "events": {},
-      "links": {},
-      "address": "0x74c73d0f12c0735464b31c640bada53805b0b067",
-      "transactionHash": "0xa60e00a0ec08eea244913129ae8eb7778ce8f158cbe48ab6181fd11a74824b13"
-    },
-    "1536189403083": {
-      "events": {},
-      "links": {},
-      "address": "0xbe4c99ab1a44ad426f7ffcb3dedcfab52a1d7370",
-      "transactionHash": "0xb7be430262ed7a9b86f2cc6a3cad5c9404b9ef7f76e89bf40078e6e9f65399a4"
+      "address": "0xacfba0485d6ad68eb59f26fe85774044308eb967",
+      "transactionHash": "0x7b6bf234301e385dcc1831c49b68c406bf75595203164f44c0ed0c49b079708d"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-06T20:52:03.788Z"
-=======
-    "1536121776912": {
-      "events": {},
-      "links": {},
-      "address": "0xda4bf1a015e3bc0ebb512694a0939bc2bab03ebc",
-      "transactionHash": "0x5ef75b9fb39dc121ee639b4d45e009939e96f342e3ce076ba7f5645e2806ddc3"
-    }
-  },
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-05T04:30:12.624Z"
->>>>>>> f41ac0d8bb6430cc9adfd58531aa23a5864adde9
+  "updatedAt": "2018-09-08T00:47:00.734Z"
 }

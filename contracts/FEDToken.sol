@@ -60,6 +60,7 @@ contract FEDToken is MintableToken {
 
     }
 
+
 }
 contract BOND {
     address bondHolder;
