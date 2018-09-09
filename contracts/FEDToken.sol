@@ -24,8 +24,8 @@ contract FEDToken is MintableToken {
      * @param _numberOfBonds the number of bonds to be released
      */
     function releaseBond(uint _numberOfBonds) public{
-        require(_numberOfBonds > 0);
-        require(bonds.length != 0);
+      //  require(_numberOfBonds > 0);
+       // require(bonds.length != 0);
         for(uint i = 0 ; i<_numberOfBonds; i++) {
             bonds[i].releaseAmount();
             delete bonds[i];
@@ -59,6 +59,10 @@ contract FEDToken is MintableToken {
         transfer(_amount, _address);
 
     }
+    function getBalance(address _address) public view returns(uint){
+        return balances[_address];
+    }
+    
 
 
 }
