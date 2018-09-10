@@ -24,8 +24,8 @@ contract FEDToken is MintableToken {
      * @param _numberOfBonds the number of bonds to be released
      */
     function releaseBond(uint _numberOfBonds) public{
-      //  require(_numberOfBonds > 0);
-       // require(bonds.length != 0);
+        require(_numberOfBonds > 0);
+        require(bonds.length != 0);
         for(uint i = 0 ; i<_numberOfBonds; i++) {
             bonds[i].releaseAmount();
             delete bonds[i];
@@ -50,7 +50,6 @@ contract FEDToken is MintableToken {
         BOND bond = new BOND(_bondholder,_amount,address(this));
         bonds.push(bond);
         balances[_bondholder] = balances[_bondholder] - _amount;
-
     }
     function getBondLength() public view returns(uint){
         return bonds.length;
@@ -84,7 +83,13 @@ contract BOND {
      */
     function releaseAmount() public {
         Fed = FEDToken(fedTokenAddress);
-        Fed.transfer(amount,bondHolder);
+        Fed.transfer(amount,bondHolder); //fails here. Contract does not have any tokens to transfer. Possibility of bad storage?
+    }
+    //Need to "approve" the contract
+    //gets the value of tokens
+    function returnValue() public view{
+        Fed = FEDToken(fedTokenAddress);
+        Fed.getBalance(this.address); 
     }
 
 }
