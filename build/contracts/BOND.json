@@ -66,7 +66,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 697,
+        "sourceUnit": 754,
         "src": "26:71:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -80,10 +80,10 @@
               "id": 3,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 696,
+              "referencedDeclaration": 753,
               "src": "253:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$696",
+                "typeIdentifier": "t_contract$_MintableToken_$753",
                 "typeString": "contract MintableToken"
               }
             },
@@ -94,12 +94,12 @@
         ],
         "contractDependencies": [
           239,
-          419,
-          515,
-          558,
-          590,
-          696,
-          943
+          476,
+          572,
+          615,
+          647,
+          753,
+          1000
         ],
         "contractKind": "contract",
         "documentation": "@title FedToken\n@dev ERC20 compatible token that responds to price increases and keeps the value\nof the token stable",
@@ -107,12 +107,12 @@
         "id": 181,
         "linearizedBaseContracts": [
           181,
-          696,
-          419,
-          943,
-          515,
-          558,
-          590
+          753,
+          476,
+          1000,
+          572,
+          615,
+          647
         ],
         "name": "FEDToken",
         "nodeType": "ContractDefinition",
@@ -433,7 +433,7 @@
                       "name": "totalSupply_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 434,
+                      "referencedDeclaration": 491,
                       "src": "588:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -481,7 +481,7 @@
                         "name": "balances",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 432,
+                        "referencedDeclaration": 489,
                         "src": "627:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -497,7 +497,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 958,
+                          "referencedDeclaration": 1015,
                           "src": "636:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -655,10 +655,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        961,
-                        962
+                        1018,
+                        1019
                       ],
-                      "referencedDeclaration": 961,
+                      "referencedDeclaration": 1018,
                       "src": "867:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -765,10 +765,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        961,
-                        962
+                        1018,
+                        1019
                       ],
-                      "referencedDeclaration": 961,
+                      "referencedDeclaration": 1018,
                       "src": "904:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1185,7 +1185,7 @@
                       "name": "mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 676,
+                      "referencedDeclaration": 733,
                       "src": "1319:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -1371,7 +1371,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 985,
+                            "referencedDeclaration": 1042,
                             "src": "1679:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_FEDToken_$181",
@@ -1900,7 +1900,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
                         150,
-                        502
+                        559
                       ],
                       "referencedDeclaration": 150,
                       "src": "1937:8:0",
@@ -2024,7 +2024,7 @@
                       "name": "balances",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 432,
+                      "referencedDeclaration": 489,
                       "src": "2057:8:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -2372,7 +2372,7 @@
             "scope": 181,
             "src": "2087:137:0",
             "stateMutability": "nonpayable",
-            "superFunction": 796,
+            "superFunction": 853,
             "visibility": "public"
           }
         ],
@@ -2699,7 +2699,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 958,
+                        "referencedDeclaration": 1015,
                         "src": "2547:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2939,7 +2939,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 987,
+                            "referencedDeclaration": 1044,
                             "src": "2749:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_BOND_$239",
@@ -3134,7 +3134,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 697,
+        "sourceUnit": 754,
         "src": "26:71:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3148,10 +3148,10 @@
               "id": 3,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 696,
+              "referencedDeclaration": 753,
               "src": "253:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$696",
+                "typeIdentifier": "t_contract$_MintableToken_$753",
                 "typeString": "contract MintableToken"
               }
             },
@@ -3162,12 +3162,12 @@
         ],
         "contractDependencies": [
           239,
-          419,
-          515,
-          558,
-          590,
-          696,
-          943
+          476,
+          572,
+          615,
+          647,
+          753,
+          1000
         ],
         "contractKind": "contract",
         "documentation": "@title FedToken\n@dev ERC20 compatible token that responds to price increases and keeps the value\nof the token stable",
@@ -3175,12 +3175,12 @@
         "id": 181,
         "linearizedBaseContracts": [
           181,
-          696,
-          419,
-          943,
-          515,
-          558,
-          590
+          753,
+          476,
+          1000,
+          572,
+          615,
+          647
         ],
         "name": "FEDToken",
         "nodeType": "ContractDefinition",
@@ -3501,7 +3501,7 @@
                       "name": "totalSupply_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 434,
+                      "referencedDeclaration": 491,
                       "src": "588:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3549,7 +3549,7 @@
                         "name": "balances",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 432,
+                        "referencedDeclaration": 489,
                         "src": "627:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -3565,7 +3565,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 958,
+                          "referencedDeclaration": 1015,
                           "src": "636:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3723,10 +3723,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        961,
-                        962
+                        1018,
+                        1019
                       ],
-                      "referencedDeclaration": 961,
+                      "referencedDeclaration": 1018,
                       "src": "867:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3833,10 +3833,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        961,
-                        962
+                        1018,
+                        1019
                       ],
-                      "referencedDeclaration": 961,
+                      "referencedDeclaration": 1018,
                       "src": "904:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4253,7 +4253,7 @@
                       "name": "mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 676,
+                      "referencedDeclaration": 733,
                       "src": "1319:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -4439,7 +4439,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 985,
+                            "referencedDeclaration": 1042,
                             "src": "1679:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_FEDToken_$181",
@@ -4968,7 +4968,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
                         150,
-                        502
+                        559
                       ],
                       "referencedDeclaration": 150,
                       "src": "1937:8:0",
@@ -5092,7 +5092,7 @@
                       "name": "balances",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 432,
+                      "referencedDeclaration": 489,
                       "src": "2057:8:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -5440,7 +5440,7 @@
             "scope": 181,
             "src": "2087:137:0",
             "stateMutability": "nonpayable",
-            "superFunction": 796,
+            "superFunction": 853,
             "visibility": "public"
           }
         ],
@@ -5767,7 +5767,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 958,
+                        "referencedDeclaration": 1015,
                         "src": "2547:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -6007,7 +6007,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 987,
+                            "referencedDeclaration": 1044,
                             "src": "2749:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_BOND_$239",
@@ -6178,5 +6178,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-12T01:33:51.331Z"
+  "updatedAt": "2018-09-12T23:14:29.948Z"
 }
