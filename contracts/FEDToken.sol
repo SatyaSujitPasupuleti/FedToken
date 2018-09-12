@@ -49,7 +49,7 @@ contract FEDToken is MintableToken {
     function addBond(uint _amount, address _bondholder) public{
         BOND bond = new BOND(_bondholder,_amount,address(this));
         bonds.push(bond);
-        balances[_bondholder] = balances[_bondholder] - _amount;
+        transferFrom(_bondholder,address(bond),_amount);
     }
     function getBondLength() public view returns(uint){
         return bonds.length;
@@ -60,6 +60,10 @@ contract FEDToken is MintableToken {
     }
     function getBalance(address _address) public view returns(uint){
         return balances[_address];
+    }
+    function transferFrom(address _from, address _to,uint256 _value) public returns(bool)
+    {
+        transferFrom(_from,_to,_value);
     }
     
 
@@ -83,13 +87,10 @@ contract BOND {
      */
     function releaseAmount() public {
         Fed = FEDToken(fedTokenAddress);
-        Fed.transfer(amount,bondHolder); //fails here. Contract does not have any tokens to transfer. Possibility of bad storage?
+        Fed.transferFrom(address(this),owner,amount); 
     }
-    //Need to "approve" the contract
+    //Need to "approve" the contract for it to store balance from erc20 token
     //gets the value of tokens
-    function returnValue() public view{
-        Fed = FEDToken(fedTokenAddress);
-        Fed.getBalance(this.address); 
-    }
+ 
 
 }
