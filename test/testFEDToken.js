@@ -1,17 +1,16 @@
 var FEDToken = artifacts.require("./FEDToken");
 contract("FEDToken", async()=>{
-    
+    var instance = await FEDToken.deployed();
+    var accounts = await web3.eth.accounts;
     
     it("should add bonds" , async() =>{
-        var instance = await FEDToken.deployed();
-        var accounts = await web3.eth.accounts;
+        
         
         instance.addBond.call(10,accounts[1]);
         assert(instance.getBondLength(),1,"bond has been successfully added to list");
 
        
-        instance.mintToDecrease.call(10,accounts[2],{from:accounts[1]});
-        assert(instance.getBalance(accounts[2]),10,"fedtoken has been correctly minted");
+        
 
       
         instance.mintToDecrease.call(10,accounts[3],{from:accounts[1]});
@@ -23,6 +22,11 @@ contract("FEDToken", async()=>{
 
 
         
+    })
+    it("should mint tokens" , async() =>{
+        instance.mintToDecrease.call(10,accounts[2],{from:accounts[1]});
+        assert(instance.getBalance(accounts[2]),10,"fedtoken has been correctly minted");
+
     })
 
  

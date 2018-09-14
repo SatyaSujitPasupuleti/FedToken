@@ -89,8 +89,7 @@ contract BOND {
         Fed = FEDToken(fedTokenAddress);
         Fed.transferFrom(address(this),owner,amount); 
     }
-    //Need to "approve" the contract for it to store balance from erc20 token
-    //gets the value of tokens
+
  
 
 }
