@@ -11,7 +11,6 @@ contract FEDToken is MintableToken {
     string public symbol = "FED";
     uint8 public decimals = 2;
     uint public INITIAL_SUPPLY = 500000000;
-    //status of how much money accounts want to put as bonds
     uint public price=100;
     bool public needMint=false;
     BOND[] bonds;
@@ -30,7 +29,6 @@ contract FEDToken is MintableToken {
             bonds[i].releaseAmount();
             delete bonds[i];
         }
-
     }
       /**
      * @dev mints more tokens, called for every token holder
