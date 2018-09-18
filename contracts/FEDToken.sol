@@ -60,7 +60,8 @@ contract FEDToken is MintableToken {
         return balances[_address];
     }
     function transferFrom(address _from, address _to,uint256 _value) public returns(bool)
-    {
+    {   
+        approve(_to,_value);
         transferFrom(_from,_to,_value);
     }
     
