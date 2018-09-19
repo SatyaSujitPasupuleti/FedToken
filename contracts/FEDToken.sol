@@ -9,7 +9,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
 contract FEDToken is MintableToken {
     string public name = "FEDToken";
     string public symbol = "FED";
-    uint8 public decimals = 2;
+    uint8 public decimals = 9;
     uint public INITIAL_SUPPLY = 500000000;
     uint public price=100;
     bool public needMint=false;
@@ -46,7 +46,7 @@ contract FEDToken is MintableToken {
      */
     function addBond(uint _amount, address _bondholder) public{
         BOND bond = new BOND(_bondholder,_amount,address(this));
-        transferFrom(_bondholder,address(bond),_amount);//tests failing here
+        transfer(_amount,_bondholder);
         bonds.push(bond);
     }
     function getBondLength() public view returns(uint){
