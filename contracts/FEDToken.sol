@@ -56,12 +56,14 @@ contract FEDToken is MintableToken {
     function getBalance(address _address) public view returns(uint){
         return balances[_address];
     }
-    function transferFrom(address _from, address _to,uint256 _value) public returns(bool)
+    function transferFrom2(address _from, address _to,uint256 _value) public returns(bool)
     {   
         approve(_to,_value);
         transferFrom(_from,_to,_value);
     }
-    
+    function getBond(uint _bondnumber) public view returns(BOND){
+        return bonds[_bondnumber];
+    }
 
 
 }
@@ -83,7 +85,11 @@ contract BOND {
      */
     function releaseAmount() public {
         Fed = FEDToken(fedTokenAddress);
-        Fed.transferFrom(address(this),owner,amount); 
+        Fed.transferFrom2(address(this),owner,amount); 
+    }
+    function getBalance() public {
+        Fed = FEDToken(fedTokenAddress);
+        Fed.getBalance(address(this));
     }
 
  
