@@ -23,19 +23,15 @@ contract("FEDToken", accounts =>{
         var instance = await FEDToken.deployed();
         await instance.addBond.call(10,accounts[0],{from:accounts[0]});
         var bond = await instance.getBond.call(0);
-        var balance =await bond.getBalance();
-        console.log(balance);
-        //await console.log(balance); //get balance of bond 1 to see if FEDToken is stored in contact
-
-
-
-
+        var balance1 = await instance.getBalance.call(bond.address);
+        var balance =await bond.getBalance(); //getting balance of contract is failing
+        await console.log(balance);
+        await console.log(balance1);
+        assert(balance, 10, "tokens have not been sent to contract");
     })
     it("should transfer tokens" , async() =>{
         var instance = await FEDToken.deployed();
         await instance.transfer.call(accounts[2],10,{from:accounts[0]});
-
-
     })
 
  
