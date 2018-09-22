@@ -27,7 +27,7 @@ contract FEDToken is MintableToken {
         require(bonds.length != 0);
         for(uint i = 0 ; i<_numberOfBonds; i++) {
             bonds[i].releaseAmount();
-            delete bonds[i];
+           // delete bonds[i];
         }
     }
       /**
