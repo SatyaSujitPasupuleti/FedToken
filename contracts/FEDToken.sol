@@ -23,8 +23,7 @@ contract FEDToken is MintableToken {
      * @param _numberOfBonds the number of bonds to be released
      */
     function releaseBond(uint _numberOfBonds) public{
-        require(_numberOfBonds > 0);
-        require(bonds.length != 0);
+     
         for(uint i = 0 ; i<_numberOfBonds; i++) {
             bonds[i].releaseAmount();
             delete bonds[i];
