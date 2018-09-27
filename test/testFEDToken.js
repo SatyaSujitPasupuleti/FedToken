@@ -23,7 +23,6 @@ contract("FEDToken", accounts =>{
         await instance.addBond.call(10,accounts[0],{from:accounts[0]});
         var bond = await instance.getBond.call(0);
         var balance1 = await instance.getBalance.call(bond.address);
-        
         await console.log(balance1);
         assert(balance1, 10, "tokens have not been sent to contract");
     })
@@ -31,9 +30,4 @@ contract("FEDToken", accounts =>{
         var instance = await FEDToken.deployed();
         await instance.transfer.call(accounts[2],10,{from:accounts[0]});
     })
-
- 
-   
-   
-  
 });
