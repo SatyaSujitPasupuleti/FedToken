@@ -20,10 +20,13 @@ contract("FEDToken", accounts =>{
     })
     it("should send tokens to contract" , async() =>{
         var instance = await FEDToken.deployed();
-        await instance.addBond.call(10,accounts[0],{from:accounts[0]});
-        var bond = await instance.getBond.call(0);
-        var balance1 = await instance.getBalance.call(bond.address);
-        assert(balance1, 10, "tokens have not been sent to contract");
+        var balance1= await instance.getBalance(accounts[0]);
+         console.log(balance1.toNumber());
+        await instance.addBond.call(10000,accounts[0],{from:accounts[0]});
+        var balance2= await instance.getBalance(accounts[0]);
+        console.log(balance2.toNumber());
+        // balance being sent to bond but not stored so balance is bouncing back 
+       
     })
     it("should transfer tokens" , async() =>{
         var instance = await FEDToken.deployed();
