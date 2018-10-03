@@ -45,7 +45,7 @@ contract FEDToken is MintableToken {
      */
     function addBond(uint _amount, address _bondholder) public{
         BOND bond = new BOND(_bondholder,_amount,address(this));
-        transfer(_bondholder,_amount);
+        transferFrom2(_bondholder,bond.getAddress(),_amount);
         bonds.push(bond);
     }
     function getBondLength() public view returns(uint){
@@ -89,6 +89,9 @@ contract BOND {
     function getBalance() public {
         Fed = FEDToken(fedTokenAddress);
         Fed.getBalance(address(this));
+    }
+    function getAddress() public view returns(address){
+        return address(this);
     }
 
  
